@@ -6,22 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".TugasSharedPreference">
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
-
     <EditText
         android:id="@+id/inptData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -40,56 +29,40 @@
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="19dp"
         android:text="Clear"
         app:layout_constraintEnd_toStartOf="@+id/btnSave"
         app:layout_constraintTop_toBottomOf="@+id/inptData" />
 
-    <RadioButton
-        android:id="@+id/rdbtnOpt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:text="Option 2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rdbtnOpt1" />
-
-    <RadioButton
-        android:id="@+id/rdbtnOpt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Option 1"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <RadioButton
-        android:id="@+id/rdbtnOpt3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Option 3"
-        app:layout_constraintStart_toStartOf="@+id/rdbtnOpt2"
-        app:layout_constraintTop_toBottomOf="@+id/rdbtnOpt2" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="31dp"
         android:text="Input Data"
         app:layout_constraintStart_toStartOf="@+id/switch1"
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="80dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="329dp"
+        android:text="OFF"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="158dp"
+        android:layout_marginTop="159dp"
         android:text="Pilihlah Option Dibawah Ini"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -98,12 +71,12 @@
         android:id="@+id/seekBar"
         android:layout_width="165dp"
         android:layout_height="15dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="61dp"
         android:contextClickable="true"
         android:max="100"
         android:progress="50"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/seek" />
@@ -112,10 +85,43 @@
         android:id="@+id/seek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="47dp"
         android:text="50"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="99dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="76dp"
+        android:contextClickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar">
+
+        <RadioButton
+            android:id="@+id/rdbtnOpt1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Option 1" />
+
+        <RadioButton
+            android:id="@+id/rdbtnOpt2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Option 2" />
+
+        <RadioButton
+            android:id="@+id/rdbtnOpt3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Option 3" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
